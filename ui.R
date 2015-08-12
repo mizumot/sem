@@ -1,4 +1,6 @@
 library(shiny)
+library(shinyAce)
+
 
 shinyUI(bootstrapPage(
 
@@ -41,7 +43,7 @@ shinyUI(bootstrapPage(
 
             strong("Scatter plot matrices"),
             br(),
-            downloadButton('downloadCorPlot', 'Download the plot as pdf'),
+
             plotOutput("corPlot"),
 
             br(),
@@ -53,14 +55,13 @@ shinyUI(bootstrapPage(
             br(),
 
             h3("Path diagram (Unstandardized estimates)"),
-            downloadButton('downloadsPlot1', 'Download the plot as pdf'),
 
             plotOutput("sPlot1"),
 
             br(),
 
             h3("Path diagram (Standardized estimates)"),
-            downloadButton('downloadsPlot2', 'Download the plot as pdf'),
+
             plotOutput("sPlot2"),
 
             br(),

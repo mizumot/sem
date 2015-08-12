@@ -115,36 +115,5 @@ shinyServer(function(input, output) {
         result()
     })
 
-    output$downloadCorPlot <- downloadHandler(
-    filename = function() {
-        paste('Corplot-', Sys.Date(), '.pdf', sep='')
-    },
-    content = function(FILE=NULL) {
-        pdf(file=FILE)
-		print(makecorPlot())
-		dev.off()
-	})
-    
-    output$downloadsPlot1 <- downloadHandler(
-    filename = function() {
-        paste('UnstdPlot-', Sys.Date(), '.pdf', sep='')
-    },
-    content = function(FILE=NULL) {
-        pdf(file=FILE)
-		print(makesPlot1())
-		dev.off()
-	})
-    
-    output$downloadsPlot2 <- downloadHandler(
-    filename = function() {
-        paste('StdPlot-', Sys.Date(), '.pdf', sep='')
-    },
-    content = function(FILE=NULL) {
-        pdf(file=FILE)
-		print(makesPlot2())
-		dev.off()
-	})
-
-
 
 })
